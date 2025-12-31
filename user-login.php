@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 				session_regenerate_id(true);
 				$_SESSION['login'] = $admin['username'];
 				$_SESSION['id']    = $admin['id'];
-				header("Location: dashboard.php");
+				header("Location: admin/index.php");
 				exit();
 			}
 		}
@@ -42,6 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			$stmt->execute();
 			$result = $stmt->get_result();
 			if ($row = $result->fetch_assoc()) {
+				session_regenerate_id(true);
 				$_SESSION['dlogin'] = $username;
 				$_SESSION['id'] = $row['id'];
 				$status = 1;
@@ -51,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 				$logStmt->execute();
 				$logStmt->close();
 
-				header("Location: dashboard.php");
+				header("Location: doctor/index.php");
 				exit();
 			}
 		}
@@ -73,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 				$logStmt->execute();
 				$logStmt->close();
 
-				header("Location: dashboard.php");
+				header("Location: user/dashboard.php");
 				exit();
 			}
 		}

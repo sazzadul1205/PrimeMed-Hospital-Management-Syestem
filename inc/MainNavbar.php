@@ -27,38 +27,6 @@
                     <a class="nav-link nav-link-premium" href="#services">Services</a>
                 </li>
 
-                <!-- Portals Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link nav-link-premium dropdown-toggle"
-                       href="#"
-                       id="portalsDropdown"
-                       role="button"
-                       data-bs-toggle="dropdown"
-                       aria-expanded="false">
-                        Author Login
-                    </a>
-
-                    <ul class="dropdown-menu shadow-sm portal-dropdown"
-                        aria-labelledby="portalsDropdown">
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="doctor">
-                                <i class="fas fa-user-md text-success me-2"></i>
-                                Doctor Portal
-                            </a>
-                        </li>
-
-                        <li><hr class="dropdown-divider"></li>
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="admin">
-                                <i class="fas fa-cogs me-2"></i>
-                                Admin Portal
-                            </a>
-                        </li>
-
-                    </ul>
-                </li>
 
                 <li class="nav-item">
                     <a class="nav-link nav-link-premium" href="#appointment">Appointment</a>

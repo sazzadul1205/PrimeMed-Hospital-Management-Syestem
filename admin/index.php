@@ -3,6 +3,12 @@ session_start();
 include("include/config.php");
 error_reporting(E_ALL);
 
+// If already logged in, redirect to dashboard
+if (isset($_SESSION['login']) && !empty($_SESSION['login'])) {
+	header("Location: dashboard.php");
+	exit();
+}
+
 $_SESSION['errmsg'] = $_SESSION['errmsg'] ?? '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -47,6 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$stmt->close();
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

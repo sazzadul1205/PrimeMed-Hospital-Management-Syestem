@@ -178,7 +178,13 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-	<div class="main-register">
+	<div class="main-register position-relative">
+		<!-- Floating Back Button -->
+		<a href="user-login.php"
+			style="position:absolute; top:15px; left:15px; font-size:1.2rem; text-decoration:none; color:#4e73df;">
+			<i class="fa fa-arrow-left"></i> Back
+		</a>
+
 		<div class="logo">
 			<h2>HMS | Patient Registration</h2>
 		</div>
@@ -242,10 +248,7 @@ if (isset($_POST['submit'])) {
 			&copy; <span class="current-year"></span> <span class="text-bold text-uppercase">HMS</span>. All rights reserved.
 		</div>
 	</div>
-
-	<script src="vendor/jquery/jquery.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-	<script src="vendor/jquery-validation/jquery.validate.min.js"></script>
 </body>
+
 
 </html>

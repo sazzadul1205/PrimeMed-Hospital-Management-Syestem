@@ -3,6 +3,12 @@ session_start();
 include("include/config.php");
 error_reporting(E_ALL);
 
+// If already logged in as doctor, redirect to dashboard
+if (isset($_SESSION['dlogin']) && !empty($_SESSION['dlogin'])) {
+	header("Location: dashboard.php"); // Or doctor/dashboard.php if you store it in a folder
+	exit();
+}
+
 $_SESSION['errmsg'] = $_SESSION['errmsg'] ?? '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -15,10 +21,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		return;
 	}
 
-	// KEEP MD5 (as requested)
+	// KEEP MD5
 	$password = md5($password);
 
-	// Secure query using prepared statement
 	$stmt = $con->prepare(
 		"SELECT id FROM doctors WHERE docEmail = ? AND password = ?"
 	);
@@ -48,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		$logStmt->bind_param("issi", $uid, $uname, $uip, $status);
 		$logStmt->execute();
 
-		header("Location: dashboard.php");
+		header("Location: dashboard.php"); // redirect after login
 		exit();
 	} else {
 
@@ -66,6 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	}
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
