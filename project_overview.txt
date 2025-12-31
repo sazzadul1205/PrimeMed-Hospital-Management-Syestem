@@ -1,0 +1,68 @@
+Project Overview: PrimeMed Hospital Management System
+
+Project Name: PrimeMed Hospital Management System
+Version: 1.0
+Author: Developed for hospital management
+Description: A comprehensive web-based hospital management system designed to streamline operations for patients, doctors, and administrators. It includes features for appointment booking, payment processing, user management, and administrative controls.
+
+Key Features:
+- User Registration and Login: Patients and doctors can register and log in to access personalized dashboards.
+- Appointment Booking: Patients can book appointments with doctors, view availability, and manage their schedules.
+- Doctor Management: Admins can add, edit, and manage doctor profiles and specializations.
+- Payment Processing: Integrated bKash payment gateway for secure bill payments and request submissions.
+- Admin Panel: Comprehensive dashboard for managing users, payments, reports, and system settings.
+- Patient Management: Doctors and admins can view and manage patient records and medical histories.
+- Reports and Analytics: Generate reports on appointments, payments, and user activities.
+- Responsive Design: Mobile-friendly interface ensuring usability across devices.
+
+Technologies Used:
+- Backend: PHP (with MySQL database)
+- Frontend: HTML5, CSS3, JavaScript, Bootstrap
+- Payment Integration: bKash API
+- Server: Apache (via XAMPP)
+- Database: MySQL
+- Additional Libraries: jQuery, FontAwesome, Google Fonts
+
+Project Structure:
+- / (Root): Main pages like index.php, dashboard.php, registration.php, etc.
+- /admin/: Admin-specific pages and includes (dashboard, user management, reports, etc.)
+- /doctor/: Doctor-specific pages (patient management, appointments, etc.)
+- /api/: API endpoints for bKash integration (create-payment.php, webhook.php)
+- /assets/: CSS, JS, images, and other static files
+- /include/: Shared includes like config.php, header.php, footer.php
+- /inc/: Additional includes like MainNavbar.php, MainFooter.php
+- /css/: Stylesheets (style.css, bootstrap.min.css, etc.)
+- /js/: JavaScript files (jquery, bootstrap, custom scripts)
+- /images/: Static images (logos, backgrounds, etc.)
+- /fonts/: Custom fonts (PT Sans)
+- /webfonts/: FontAwesome webfonts
+- /videos/: Background videos
+- /plugins/: Additional plugins (scroll effects)
+- /scss/: SCSS source files
+- /master/: Build tools (Sass config)
+
+Database Tables:
+- users: Patient and user information
+- doctors: Doctor profiles and specializations
+- appointments: Appointment bookings
+- payment_requests: Payment request records
+- tblcontactus: Contact form submissions
+- Other tables for logs, settings, etc.
+
+Installation and Setup:
+1. Ensure XAMPP is installed and running (Apache and MySQL).
+2. Place the project files in the htdocs directory (e.g., C:/xampp/htdocs/PrimeMed).
+3. Import the database schema from payment_requests_table.sql or equivalent.
+4. Configure database connection in include/config.php.
+5. Access the application via http://localhost/PrimeMed.
+
+Mobile Responsiveness:
+- The website has been updated to be fully responsive, with media queries for tablets (768px) and mobile phones (480px).
+- Adjustments include scaled font sizes, flexible layouts, and optimized padding/margins for smaller screens.
+- Images are set to auto height, and overflow is prevented for better mobile experience.
+
+Final Notes:
+- Ensure all PHP files have proper error reporting enabled for debugging.
+- Test payment integrations in a secure environment.
+- Regularly backup the database and monitor for security updates.
+- The system is designed for ease of use and scalability for hospital operations.
